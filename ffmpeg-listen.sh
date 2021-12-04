@@ -1,0 +1,1 @@
+ffmpeg -nostdin -listen 1 -i rtmp://localhost:1935/ -f null - &
