@@ -9,4 +9,11 @@ RUN install_packages \
     gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad \
     gstreamer1.0-plugins-ugly \
     gstreamer1.0-tools \
-    ffmpeg
+    ffmpeg \
+    python3 python3-pip python3-setuptools python3-wheel ninja-build \
+    flex bison \
+    libx264-dev
+    # meson ninja
+RUN pip3 install meson
+# ENV PATH $PATH:~/.local/bin
+ENV PATH $HOME/.local/bin:$PATH
