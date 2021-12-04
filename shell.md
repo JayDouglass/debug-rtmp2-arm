@@ -1,7 +1,5 @@
-
 # start ffmpeg in background
-ffmpeg -nostdin -listen 1 -i rtmp://localhost:1935/ -f null - &
-
+ffmpeg -hide_banner -loglevel error -nostdin -listen 1 -i rtmp://localhost:1935/ -f null - &
 
 # rtmp2sink
 gst-launch-1.0 \

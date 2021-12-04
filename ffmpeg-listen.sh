@@ -1,1 +1,3 @@
-ffmpeg -nostdin -listen 1 -i rtmp://localhost:1935/ -f null - &
+while ffmpeg -hide_banner -loglevel error -nostats -nostdin -listen 1 -i rtmp://localhost:1935/ -f null -; do
+  echo Restarting ffmpeg...
+done
